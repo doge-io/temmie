@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/corgi-falling0005.png-4e7276e55ba18ce8b060e0616d5c7a28.stex"
+path="res://.import/corgi_falling0000.png-981d569f602107dc8bbbf5ddb0f13989.stex"
 
 [deps]
 
-source_file="res://animations/corgi-falling0005.png"
-dest_files=[ "res://.import/corgi-falling0005.png-4e7276e55ba18ce8b060e0616d5c7a28.stex" ]
+source_file="res://animations/corgi_falling0000.png"
+dest_files=[ "res://.import/corgi_falling0000.png-981d569f602107dc8bbbf5ddb0f13989.stex" ]
 
 [params]
 

@@ -69,8 +69,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 frames = SubResource( 2 )
-animation = "Walk"
-frame = 2
+animation = "Idle"
+frame = 9
 playing = true
 _sections_unfolded = [ "Material", "Visibility" ]
 
