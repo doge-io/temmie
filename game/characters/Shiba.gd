@@ -70,7 +70,7 @@ func on_timeout_complete():
 func spawn_cloud():
 	cloud = cloudObj.instance()
 	cloud.position = get_position()
-	cloud.position.y += 16
+	cloud.position.y += 36
 	get_parent().add_child(cloud)
 	cloud_created = true
 	timer.start()
