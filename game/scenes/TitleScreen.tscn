@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/ParallaxLayer.gd" type="Script" id=1]
 [ext_resource path="res://background/level2-blue-sky.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/floor-crosswalk.png" type="Texture" id=9]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=10]
 [ext_resource path="res://munro.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://resources/2d7a59f4ad14f538313f6c3e5d91561e.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -759,6 +760,11 @@ text = "Quit Game"
 flat = true
 align = 1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+position = Vector2( 316.902, 114.588 )
+texture = ExtResource( 12 )
 
 [connection signal="pressed" from="Control/StartButton" to="Control" method="_on_StartButton_pressed"]
 

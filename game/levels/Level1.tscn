@@ -6,7 +6,7 @@
 [ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node"]
+[node name="Level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
