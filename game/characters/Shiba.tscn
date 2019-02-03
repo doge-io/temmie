@@ -50,7 +50,7 @@ _sections_unfolded = [ "Resource" ]
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.3403, 18.7591 )
+extents = Vector2( 26.3403, 16.9025 )
 
 [node name="Shiba" type="KinematicBody2D" index="0"]
 
@@ -69,7 +69,7 @@ position = Vector2( 7.64364, -6.21008 )
 scale = Vector2( 1.23886, 1.19406 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 11
+frame = 3
 playing = true
 _sections_unfolded = [ "Material", "Visibility" ]
 
