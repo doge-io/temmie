@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/sample.tres" type="TileSet" id=2]
 [ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=6]
 
 [node name="Level3" type="Node" index="0"]
 
@@ -52,5 +53,10 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="HUD" parent="." index="5" instance=ExtResource( 6 )]
+
+visible = false
+margin_right = 194.0
 
 
