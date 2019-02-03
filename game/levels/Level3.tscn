@@ -1,18 +1,18 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://levels/Level1.gd" type="Script" id=1]
-[ext_resource path="res://sprites/b2-full.png" type="Texture" id=2]
-[ext_resource path="res://sprites/b3-full.png" type="Texture" id=3]
-[ext_resource path="res://sprites/building-full.png" type="Texture" id=4]
-[ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=5]
-[ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=6]
-[ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=7]
-[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=8]
-[ext_resource path="res://tilesets/sample.tres" type="TileSet" id=9]
-[ext_resource path="res://scenes/ParallaxLayer.gd" type="Script" id=10]
-[ext_resource path="res://background/main-menu-background.png" type="Texture" id=11]
-[ext_resource path="res://scenes/ParallaxLayer2.gd" type="Script" id=12]
-[ext_resource path="res://background/level2-clouds.png" type="Texture" id=13]
+[ext_resource path="res://scenes/ParallaxLayer.gd" type="Script" id=2]
+[ext_resource path="res://background/main-menu-background.png" type="Texture" id=3]
+[ext_resource path="res://scenes/ParallaxLayer2.gd" type="Script" id=4]
+[ext_resource path="res://background/level2-clouds.png" type="Texture" id=5]
+[ext_resource path="res://sprites/b2-full.png" type="Texture" id=6]
+[ext_resource path="res://sprites/b3-full.png" type="Texture" id=7]
+[ext_resource path="res://sprites/building-full.png" type="Texture" id=8]
+[ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=10]
+[ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=11]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=12]
+[ext_resource path="res://tilesets/sample.tres" type="TileSet" id=13]
 [ext_resource path="res://sounds/overworld.wav" type="AudioStream" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -34,138 +34,7 @@ extents = Vector2( 167.971, 10 )
 
 script = ExtResource( 1 )
 
-[node name="Building" type="Sprite" parent="." index="0"]
-
-position = Vector2( 106.102, 638.483 )
-scale = Vector2( 1.06236, 1.52784 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Building" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/StaticBody2D" index="0"]
-
-position = Vector2( 1.33057, -170.899 )
-shape = SubResource( 1 )
-one_way_collision = true
-
-[node name="Building2" type="Sprite" parent="." index="1"]
-
-position = Vector2( 587.36, 621.753 )
-scale = Vector2( 1.32869, 1.77191 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Building2" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Building2/StaticBody2D" index="0"]
-
-position = Vector2( 2.52222, -136.739 )
-shape = SubResource( 2 )
-one_way_collision = true
-
-[node name="Building3" type="Sprite" parent="." index="2"]
-
-position = Vector2( 1159.64, 628.157 )
-scale = Vector2( 1, 1.35836 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Building3" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Building3/StaticBody2D" index="0"]
-
-position = Vector2( -2.86646, -172.064 )
-shape = SubResource( 3 )
-one_way_collision = true
-
-[node name="Corgi" parent="." index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 177.476, 327.482 )
-
-[node name="Bloodhound" parent="." index="4" instance=ExtResource( 6 )]
-
-position = Vector2( 37.4878, 320.552 )
-
-[node name="Shiba" parent="." index="5" instance=ExtResource( 7 )]
-
-position = Vector2( 105.994, 333.204 )
-
-[node name="Tween" type="Tween" parent="." index="6"]
-
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 8 )]
-
-[node name="TileMap" type="TileMap" parent="." index="8"]
-
-position = Vector2( -60.2975, -0.440125 )
-mode = 0
-tile_set = ExtResource( 9 )
-cell_size = Vector2( 32, 32 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray(  )
-_sections_unfolded = [ "Cell" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="9"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
 layer = -1
 offset = Vector2( -320, -480 )
@@ -184,13 +53,17 @@ scroll_ignore_camera_zoom = false
 motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 640, 360 )
-script = ExtResource( 10 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="level2-blue-sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 position = Vector2( 320, 180 )
-texture = ExtResource( 11 )
+texture = ExtResource( 3 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 
@@ -198,15 +71,227 @@ position = Vector2( 0, -288 )
 motion_scale = Vector2( 0.3, 0.3 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 640, 360 )
-script = ExtResource( 12 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="level2-clouds" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
 position = Vector2( 320, 180 )
-texture = ExtResource( 13 )
+texture = ExtResource( 5 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="10"]
+[node name="Node" type="Node" parent="." index="1"]
+
+[node name="Building" type="Sprite" parent="Node" index="0"]
+
+position = Vector2( 106.102, 638.483 )
+scale = Vector2( 1.06236, 1.52784 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building/StaticBody2D" index="0"]
+
+position = Vector2( 1.33057, -170.899 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="Building6" type="Sprite" parent="Node" index="1"]
+
+position = Vector2( 1258.2, 425.479 )
+scale = Vector2( 0.736125, 1.44195 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building6/StaticBody2D" index="0"]
+
+position = Vector2( 1.33057, -170.899 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="Building2" type="Sprite" parent="Node" index="2"]
+
+position = Vector2( 587.36, 621.753 )
+scale = Vector2( 1.32869, 1.77191 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building2/StaticBody2D" index="0"]
+
+position = Vector2( 2.52222, -136.739 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="Building5" type="Sprite" parent="Node" index="3"]
+
+position = Vector2( 587.36, 621.753 )
+scale = Vector2( 1.32869, 1.77191 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building5/StaticBody2D" index="0"]
+
+position = Vector2( 2.52222, -136.739 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="Building3" type="Sprite" parent="Node" index="4"]
+
+position = Vector2( 1218.75, 631.714 )
+scale = Vector2( 1, 1.35836 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building3/StaticBody2D" index="0"]
+
+position = Vector2( -2.86646, -172.064 )
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="Building4" type="Sprite" parent="Node" index="5"]
+
+position = Vector2( 1712.25, 514.619 )
+scale = Vector2( 1, 1.35836 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Building4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Building4/StaticBody2D" index="0"]
+
+position = Vector2( -2.86646, -172.064 )
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="Corgi" parent="." index="2" instance=ExtResource( 9 )]
+
+position = Vector2( 1316.75, 293.115 )
+
+[node name="Bloodhound" parent="." index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 1304.67, 321.469 )
+
+[node name="Shiba" parent="." index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 1355.72, 347.392 )
+
+[node name="Tween" type="Tween" parent="." index="5"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 12 )]
+
+[node name="TileMap" type="TileMap" parent="." index="7"]
+
+position = Vector2( -60.2975, -0.440125 )
+mode = 0
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196658, 0, 0, 196659, 0, 0, 196660, 0, 0, 196661, 0, 0, 196662, 0, 0, 196663, 0, 0, 196664, 0, 0, 196665, 0, 0, 196666, 0, 0, 196667, 0, 0, 196668, 0, 0, 262199, 0, 0, 327735, 0, 0, 327740, 0, 0, 393276, 0, 0, 458812, 0, 0, 524348, 0, 0, 589874, 0, 0, 589884, 0, 0, 655410, 0, 0, 655418, 0, 0, 655419, 0, 0, 655420, 0, 0, 720949, 0, 0, 720950, 0, 0, 720952, 0, 0, 720953, 0, 0, 720954, 0, 0, 786482, 0, 0, 786483, 0, 0, 852018, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
 stream = ExtResource( 14 )
 volume_db = 0.0
