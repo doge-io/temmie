@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Shiba.gd" type="Script" id=1]
+[ext_resource path="res://animations/shibe_idle0000.png" type="Texture" id=2]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.7307, 15.7461 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Shiba" type="KinematicBody2D"]
+
+position = Vector2( 357.958, 311.658 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 1.19165, 11.5192 )
+shape = SubResource( 1 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = SubResource( 2 )
+animation = "default"
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

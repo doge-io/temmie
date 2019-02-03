@@ -11,6 +11,9 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = 400
+func _ready():
+	pass
+	
 func _physics_process(delta):
 	motion.y += GRAVITY
 	if active:
