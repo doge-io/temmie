@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/Ending.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ending-background.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sprites/end.png" type="Texture" id=7]
+[ext_resource path="res://sounds/ending.wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,7 +19,7 @@ extents = Vector2( 319.556, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Ending" type="Control"]
+[node name="Ending" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -98,6 +99,15 @@ position = Vector2( -736.464, 254.458 )
 scale = Vector2( 0.890748, 0.904738 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
 

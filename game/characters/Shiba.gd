@@ -57,7 +57,8 @@ func _physics_process(delta):
 				double_jumped = false
 			elif not double_jumped:
 				motion.y = -JUMP_HEIGHT
-				fart.play()
+				if fart:
+					fart.play()
 				double_jumped = true
 				
 				if cloud_created:

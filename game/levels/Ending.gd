@@ -12,7 +12,7 @@ var kid_textures = null
 func _ready():
 	get_tree().get_root().set_disable_input(true)
 	effect.interpolate_property(corgi, 'translate',
-        corgi.position, Vector2(227, 296), 3,
+        corgi.get_global_position(), Vector2(227, 296), 3,
         Tween.TRANS_LINEAR, Tween.EASE_IN)
 	effect.start()
 	corgi.get_child(0).play("Walk")

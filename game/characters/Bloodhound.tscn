@@ -7,13 +7,13 @@
 [ext_resource path="res://animations/bloodhound_idle0003.png" type="Texture" id=5]
 [ext_resource path="res://animations/bloodhound_idle0004.png" type="Texture" id=6]
 [ext_resource path="res://animations/bloodhound_idle0005.png" type="Texture" id=7]
-[ext_resource path="res://animations/bloodhound_walk0000.png" type="Texture" id=8]
-[ext_resource path="res://animations/bloodhound_walk0001.png" type="Texture" id=9]
-[ext_resource path="res://animations/bloodhound_walk0002.png" type="Texture" id=10]
-[ext_resource path="res://animations/bloodhound_walk0003.png" type="Texture" id=11]
-[ext_resource path="res://animations/bloodhound_walk0004.png" type="Texture" id=12]
-[ext_resource path="res://animations/bloodhound_walk0005.png" type="Texture" id=13]
-[ext_resource path="res://animations/bloodhound-jump.png" type="Texture" id=14]
+[ext_resource path="res://animations/bloodhound-jump.png" type="Texture" id=8]
+[ext_resource path="res://animations/bloodhound_walk0000.png" type="Texture" id=9]
+[ext_resource path="res://animations/bloodhound_walk0001.png" type="Texture" id=10]
+[ext_resource path="res://animations/bloodhound_walk0002.png" type="Texture" id=11]
+[ext_resource path="res://animations/bloodhound_walk0003.png" type="Texture" id=12]
+[ext_resource path="res://animations/bloodhound_walk0004.png" type="Texture" id=13]
+[ext_resource path="res://animations/bloodhound_walk0005.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -23,14 +23,14 @@ animations = [ {
 "name": "Idle",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Walk",
 "speed": 5.0
 } ]
 
@@ -39,7 +39,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 27.0819, 18.2486 )
 
-[node name="Bloodhound" type="KinematicBody2D"]
+[node name="Bloodhound" type="KinematicBody2D" index="0"]
 
 position = Vector2( 219.303, 317.556 )
 scale = Vector2( 1.10842, 1.11242 )
