@@ -26,7 +26,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Corgi" type="KinematicBody2D"]
+[node name="Corgi" type="KinematicBody2D" index="0"]
 
 position = Vector2( 96, 320 )
 input_pickable = false

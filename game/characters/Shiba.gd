@@ -31,6 +31,12 @@ func _ready():
 	
 func _physics_process(delta):
 	motion.y += GRAVITY
+	
+	if motion.x != 0:
+		$AnimatedSprite.play("Walk")
+	else:
+		$AnimatedSprite.play("Idle")
+		
 	if active:
 		if Input.is_action_pressed("ui_right"):
 			motion.x = SPEED

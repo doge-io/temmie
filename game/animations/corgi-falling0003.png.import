@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shibe-walk0007.png-45c111d845bc32821137e5f2ed5bf28c.stex"
+path="res://.import/corgi-falling0003.png-b84bfc0dcf1ff72d25920d2c9725fe29.stex"
 
 [deps]
 
-source_file="res://animations/shibe-walk0007.png"
-dest_files=[ "res://.import/shibe-walk0007.png-45c111d845bc32821137e5f2ed5bf28c.stex" ]
+source_file="res://animations/corgi-falling0003.png"
+dest_files=[ "res://.import/corgi-falling0003.png-b84bfc0dcf1ff72d25920d2c9725fe29.stex" ]
 
 [params]
 

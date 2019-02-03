@@ -8,9 +8,9 @@ var motion = Vector2()
 onready var active = true
 
 const UP = Vector2(0, -1)
-const GRAVITY = 20
+const GRAVITY = 8
 const SPEED = 200
-const JUMP_HEIGHT = 400
+const JUMP_HEIGHT = 200
 func _ready():
 	pass
 	
@@ -37,7 +37,5 @@ func _physics_process(delta):
 				motion.y = -JUMP_HEIGHT
 	else:
 		motion.x = 0
-		
-	
 		
 	motion = move_and_slide(motion, UP)

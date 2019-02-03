@@ -33,7 +33,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 27.0819, 16.2982 )
 
-[node name="Bloodhound" type="KinematicBody2D" index="0"]
+[node name="Bloodhound" type="KinematicBody2D"]
 
 position = Vector2( 215.834, 321.153 )
 input_pickable = false
@@ -48,7 +48,7 @@ _sections_unfolded = [ "Collision", "Pickable" ]
 position = Vector2( -4.09706, 8.41193 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
