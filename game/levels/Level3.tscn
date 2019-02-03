@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://sprites/b2-full.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=7]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://tilesets/sample.tres" type="TileSet" id=9]
+[ext_resource path="res://scenes/ParallaxLayer.gd" type="Script" id=10]
+[ext_resource path="res://background/level2-blue-sky.png" type="Texture" id=11]
+[ext_resource path="res://scenes/ParallaxLayer2.gd" type="Script" id=12]
+[ext_resource path="res://background/level2-clouds.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -159,5 +163,46 @@ _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="9"]
+
+layer = -1
+offset = Vector2( -320, -480 )
+rotation = 0.0
+scale = Vector2( 3, 3 )
+transform = Transform2D( 3, 0, 0, 3, -320, -480 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 0.1, 0.1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 640, 360 )
+script = ExtResource( 10 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="level2-blue-sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 320, 180 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+
+position = Vector2( 0, -288 )
+motion_scale = Vector2( 0.3, 0.3 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 640, 360 )
+script = ExtResource( 12 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="level2-clouds" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+
+position = Vector2( 320, 180 )
+texture = ExtResource( 13 )
 
 
