@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level2-midground-buildings.png-05123001ec96671989163bcc8d6995d9.stex"
+path="res://.import/floor1.png-6bccb1551804e904cafd3ea92032706b.stex"
 
 [deps]
 
-source_file="res://background/level2-midground-buildings.png"
-dest_files=[ "res://.import/level2-midground-buildings.png-05123001ec96671989163bcc8d6995d9.stex" ]
+source_file="res://sprites/floor1.png"
+dest_files=[ "res://.import/floor1.png-6bccb1551804e904cafd3ea92032706b.stex" ]
 
 [params]
 
