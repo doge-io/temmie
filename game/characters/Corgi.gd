@@ -6,7 +6,6 @@ extends KinematicBody2D
 
 var motion = Vector2()
 onready var active = true
-
 const UP = Vector2(0, -1)
 const GRAVITY = 6
 const SPEED = 200

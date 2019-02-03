@@ -54,3 +54,6 @@ func _process(delta):
 	for player in players:
 		if player.position.y > 1000:
 			get_tree().reload_current_scene()
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://levels/Ending.tscn")

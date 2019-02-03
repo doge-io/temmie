@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ParallaxLayer.gd" type="Script" id=2]
@@ -8,12 +8,13 @@
 [ext_resource path="res://sprites/b2-full.png" type="Texture" id=6]
 [ext_resource path="res://sprites/b3-full.png" type="Texture" id=7]
 [ext_resource path="res://sprites/building-full.png" type="Texture" id=8]
-[ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=9]
-[ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=10]
-[ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=11]
-[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=12]
-[ext_resource path="res://tilesets/sample.tres" type="TileSet" id=13]
-[ext_resource path="res://sounds/overworld.wav" type="AudioStream" id=14]
+[ext_resource path="res://sprites/elevator.png" type="Texture" id=9]
+[ext_resource path="res://characters/Corgi.tscn" type="PackedScene" id=10]
+[ext_resource path="res://characters/Bloodhound.tscn" type="PackedScene" id=11]
+[ext_resource path="res://characters/Shiba.tscn" type="PackedScene" id=12]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=13]
+[ext_resource path="res://tilesets/sample.tres" type="TileSet" id=14]
+[ext_resource path="res://sounds/overworld.wav" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,6 +30,21 @@ extents = Vector2( 150.348, 10 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 167.971, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 21.5836, 4.27418 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.36755, 179.042 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.8158, 25.9507 )
 
 [node name="Level3" type="Node" index="0"]
 
@@ -235,17 +251,51 @@ position = Vector2( -2.86646, -172.064 )
 shape = SubResource( 3 )
 one_way_collision = true
 
-[node name="Corgi" parent="." index="2" instance=ExtResource( 9 )]
+[node name="Elevator" type="Sprite" parent="Node" index="6"]
 
-position = Vector2( 13.2528, 241.351 )
+position = Vector2( 1939.39, 361.52 )
+scale = Vector2( 2.00547, 1.74279 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bloodhound" parent="." index="3" instance=ExtResource( 10 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Elevator" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Elevator/StaticBody2D" index="0"]
+
+position = Vector2( 1.87317, -202.805 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node/Elevator/StaticBody2D" index="1"]
+
+position = Vector2( 24.9096, -21.3289 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node/Elevator/StaticBody2D" index="2"]
+
+position = Vector2( -22.6161, 62.9555 )
+shape = SubResource( 5 )
+
+[node name="Corgi" parent="." index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 13.9499, 243.111 )
+
+[node name="Bloodhound" parent="." index="3" instance=ExtResource( 11 )]
 
 position = Vector2( 11.2503, 325.873 )
 
-[node name="Shiba" parent="." index="4" instance=ExtResource( 11 )]
+[node name="Shiba" parent="." index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 7.37964, 292.812 )
+position = Vector2( 7.73813, 292.812 )
 
 [node name="Tween" type="Tween" parent="." index="5"]
 
@@ -264,13 +314,13 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 12 )]
+[node name="HUD" parent="CanvasLayer" index="0" instance=ExtResource( 13 )]
 
 [node name="TileMap" type="TileMap" parent="." index="7"]
 
 position = Vector2( -60.2975, -0.440125 )
 mode = 0
-tile_set = ExtResource( 13 )
+tile_set = ExtResource( 14 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -293,11 +343,31 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 15 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
+
+[node name="Area2D" type="Area2D" parent="." index="9"]
+
+position = Vector2( 1937.47, 435.147 )
+scale = Vector2( 1.6377, 1.8401 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 2.8761, 36.4613 )
+shape = SubResource( 6 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 
