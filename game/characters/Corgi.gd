@@ -12,6 +12,7 @@ const SPEED = 200
 const JUMP_HEIGHT = 200
 onready var ray = get_node("Ray")
 onready var ray2 = get_node("Ray2")
+onready var jump = get_node("/root/Level3/Jump")
 func _ready():
 	pass
 	
@@ -36,6 +37,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			if Input.is_action_just_pressed("ui_up"):
 				motion.y = -JUMP_HEIGHT
+				jump.play()
 				
 	else:
 		motion.x = 0
