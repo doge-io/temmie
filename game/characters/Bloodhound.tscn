@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://characters/Bloodhound.gd" type="Script" id=1]
 [ext_resource path="res://animations/bloodhound_idle0000.png" type="Texture" id=2]
@@ -7,14 +7,25 @@
 [ext_resource path="res://animations/bloodhound_idle0003.png" type="Texture" id=5]
 [ext_resource path="res://animations/bloodhound_idle0004.png" type="Texture" id=6]
 [ext_resource path="res://animations/bloodhound_idle0005.png" type="Texture" id=7]
+[ext_resource path="res://animations/bloodhound_walk0000.png" type="Texture" id=8]
+[ext_resource path="res://animations/bloodhound_walk0001.png" type="Texture" id=9]
+[ext_resource path="res://animations/bloodhound_walk0002.png" type="Texture" id=10]
+[ext_resource path="res://animations/bloodhound_walk0003.png" type="Texture" id=11]
+[ext_resource path="res://animations/bloodhound_walk0004.png" type="Texture" id=12]
+[ext_resource path="res://animations/bloodhound_walk0005.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "default",
+"name": "Idle",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -22,7 +33,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 27.0819, 16.2982 )
 
-[node name="Bloodhound" type="KinematicBody2D"]
+[node name="Bloodhound" type="KinematicBody2D" index="0"]
 
 position = Vector2( 215.834, 321.153 )
 input_pickable = false
@@ -36,8 +47,8 @@ _sections_unfolded = [ "Collision", "Pickable" ]
 
 position = Vector2( -4.09706, 8.41193 )
 frames = SubResource( 1 )
-animation = "default"
-frame = 3
+animation = "Idle"
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
