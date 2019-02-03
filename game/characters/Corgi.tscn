@@ -58,7 +58,7 @@ _sections_unfolded = [ "Collision", "Pickable", "collision" ]
 position = Vector2( -32, -32 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 6
+frame = 1
 playing = true
 centered = false
 offset = Vector2( 0, 15 )
@@ -79,7 +79,7 @@ limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = false
+smoothing_enabled = true
 smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0
@@ -90,6 +90,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Smoothing" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -105,5 +106,6 @@ collision_mask = 1
 
 position = Vector2( 2.13595, 23.4955 )
 shape = SubResource( 2 )
+one_way_collision = true
 
 

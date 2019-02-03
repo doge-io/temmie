@@ -16,7 +16,6 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
-	motion = move_and_slide(motion, UP)
 	motion.y += GRAVITY
 	
 	if ray.is_colliding():
@@ -40,5 +39,6 @@ func _physics_process(delta):
 				
 	else:
 		motion.x = 0
-		
+	
+	motion = move_and_slide(motion, UP)
 	
