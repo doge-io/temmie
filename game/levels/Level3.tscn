@@ -237,15 +237,15 @@ one_way_collision = true
 
 [node name="Corgi" parent="." index="2" instance=ExtResource( 9 )]
 
-position = Vector2( 1316.75, 293.115 )
+position = Vector2( 13.2528, 241.351 )
 
 [node name="Bloodhound" parent="." index="3" instance=ExtResource( 10 )]
 
-position = Vector2( 1304.67, 321.469 )
+position = Vector2( 11.2503, 325.873 )
 
 [node name="Shiba" parent="." index="4" instance=ExtResource( 11 )]
 
-position = Vector2( 1355.72, 347.392 )
+position = Vector2( 7.37964, 292.812 )
 
 [node name="Tween" type="Tween" parent="." index="5"]
 
