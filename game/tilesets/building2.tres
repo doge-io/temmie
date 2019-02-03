@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=13 format=2]
+[gd_resource type="TileSet" load_steps=23 format=2]
 
 [ext_resource path="res://sprites/b2-part1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/b2-part2.png" type="Texture" id=2]
@@ -12,10 +12,60 @@
 [ext_resource path="res://sprites/b2-part9.png" type="Texture" id=10]
 [ext_resource path="res://sprites/b2-part10.png" type="Texture" id=11]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 16, 16, -16, 16, -16, -16, 16, -16 )
 
 [resource]
 
@@ -29,9 +79,9 @@ extents = Vector2( 10, 10 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
+"one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/name = "Sprite2"
 1/texture = ExtResource( 2 )
@@ -43,9 +93,9 @@ extents = Vector2( 10, 10 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/name = "Sprite3"
 2/texture = ExtResource( 4 )
@@ -57,9 +107,9 @@ extents = Vector2( 10, 10 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/name = "Sprite4"
 3/texture = ExtResource( 5 )
@@ -71,9 +121,9 @@ extents = Vector2( 10, 10 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/name = "Sprite5"
 4/texture = ExtResource( 6 )
@@ -85,9 +135,9 @@ extents = Vector2( 10, 10 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/name = "Sprite6"
 5/texture = ExtResource( 7 )
@@ -99,9 +149,9 @@ extents = Vector2( 10, 10 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/name = "Sprite7"
 6/texture = ExtResource( 8 )
@@ -113,9 +163,9 @@ extents = Vector2( 10, 10 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/name = "Sprite8"
 7/texture = ExtResource( 9 )
@@ -127,9 +177,9 @@ extents = Vector2( 10, 10 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/name = "Sprite9"
 8/texture = ExtResource( 10 )
@@ -141,9 +191,9 @@ extents = Vector2( 10, 10 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/name = "Sprite10"
 9/texture = ExtResource( 11 )
@@ -155,9 +205,9 @@ extents = Vector2( 10, 10 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 10/name = "Sprite11"
 10/texture = ExtResource( 3 )
@@ -169,8 +219,8 @@ extents = Vector2( 10, 10 )
 10/navigation_offset = Vector2( 0, 0 )
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
-"one_way": true,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1.6, 0, 0, 1.6, 2.38419e-07, 2.38419e-07 )
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 
