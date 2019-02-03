@@ -12,8 +12,12 @@ const JUMP_HEIGHT = 400
 
 var motion = Vector2()
 var double_jumped = false
+var cloudObj = null
+var cloud = null
 onready var active = false
-
+onready var cloud_created = false
+func _ready():
+	cloudObj = load("res://Cloud.tscn")
 func _physics_process(delta):
 	motion.y += GRAVITY
 	if active:
@@ -32,7 +36,16 @@ func _physics_process(delta):
 				motion.y = -JUMP_HEIGHT
 				double_jumped = true
 				
+				if cloud_created:
+					get_parent().remove_child(cloud)
+				cloud = cloudObj.instance()
+				cloud.position = get_position()
+				cloud.position.y += 16
+				get_node("/root/Level1").add_child(cloud)
+				cloud_created = true
+				
+				
 	else:
 		motion.x = 0
-		
+	
 	motion = move_and_slide(motion, UP)
