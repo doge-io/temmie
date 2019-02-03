@@ -63,6 +63,7 @@ position = Vector2( 7.64364, -6.21008 )
 scale = Vector2( 1.23886, 1.19406 )
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 9
 playing = true
 _sections_unfolded = [ "Material", "Visibility" ]
 
@@ -78,7 +79,7 @@ _sections_unfolded = [ "Transform" ]
 anchor_mode = 1
 rotating = false
 current = false
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 1.5, 1.5 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
