@@ -1,8 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://characters/Shiba.gd" type="Script" id=1]
 [ext_resource path="res://animations/shibe_idle0000.png" type="Texture" id=2]
-
+[ext_resource path="res://animations/shibe_idle0001.png" type="Texture" id=3]
+[ext_resource path="res://animations/shibe_idle0002.png" type="Texture" id=4]
+[ext_resource path="res://animations/shibe_idle0003.png" type="Texture" id=5]
+[ext_resource path="res://animations/shibe_idle0004.png" type="Texture" id=6]
+[ext_resource path="res://animations/shibe_idle0005.png" type="Texture" id=7]
+[ext_resource path="res://animations/shibe_idle0006.png" type="Texture" id=8]
+[ext_resource path="res://animations/shibe_idle0007.png" type="Texture" id=9]
+[ext_resource path="res://animations/shibe_idle0008.png" type="Texture" id=10]
+[ext_resource path="res://animations/shibe_idle0009.png" type="Texture" id=11]
+[ext_resource path="res://animations/shibe_idle0010.png" type="Texture" id=12]
+[ext_resource path="res://animations/shibe_idle0011.png" type="Texture" id=13]
+[ext_resource path="res://characters/AnimatedSprite.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,14 +23,14 @@ extents = Vector2( 24.7307, 15.7461 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
+"name": "New Anim",
+"speed": 8.0
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Shiba" type="KinematicBody2D"]
+[node name="Shiba" type="KinematicBody2D" index="0"]
 
 position = Vector2( 357.958, 311.658 )
 input_pickable = false
@@ -27,7 +38,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -42,7 +53,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 frames = SubResource( 2 )
-animation = "default"
+animation = "New Anim"
+frame = 4
+playing = true
+script = ExtResource( 14 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
 

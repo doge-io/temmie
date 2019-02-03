@@ -4,7 +4,6 @@
 [ext_resource path="res://animations/cloud-platform0000.png" type="Texture" id=2]
 [ext_resource path="res://animations/cloud-platform0001.png" type="Texture" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -16,10 +15,10 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 3.0
 } ]
 
-[node name="Cloud" type="StaticBody2D"]
+[node name="Cloud" type="StaticBody2D" index="0"]
 
 position = Vector2( 361.757, 412.715 )
 scale = Vector2( 1, 0.301272 )
@@ -56,6 +55,7 @@ position = Vector2( 0.130193, -4.06789 )
 scale = Vector2( 1.97871, 4.45279 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
