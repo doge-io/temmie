@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://characters/Shiba.gd" type="Script" id=1]
 [ext_resource path="res://animations/shibe_idle0000.png" type="Texture" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://animations/shibe_idle0009.png" type="Texture" id=11]
 [ext_resource path="res://animations/shibe_idle0010.png" type="Texture" id=12]
 [ext_resource path="res://animations/shibe_idle0011.png" type="Texture" id=13]
-[ext_resource path="res://characters/AnimatedSprite.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,7 +29,7 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Shiba" type="KinematicBody2D" index="0"]
+[node name="Shiba" type="KinematicBody2D"]
 
 position = Vector2( 357.958, 311.658 )
 input_pickable = false
@@ -54,9 +53,8 @@ _sections_unfolded = [ "Transform" ]
 
 frames = SubResource( 2 )
 animation = "New Anim"
-frame = 4
+frame = 10
 playing = true
-script = ExtResource( 14 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
 

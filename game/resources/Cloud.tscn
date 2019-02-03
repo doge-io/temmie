@@ -18,7 +18,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Cloud" type="StaticBody2D" index="0"]
+[node name="Cloud" type="StaticBody2D"]
 
 position = Vector2( 361.757, 412.715 )
 scale = Vector2( 1, 0.301272 )
@@ -55,7 +55,6 @@ position = Vector2( 0.130193, -4.06789 )
 scale = Vector2( 1.97871, 4.45279 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
