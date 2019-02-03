@@ -1,7 +1,7 @@
 extends Node
 
-onready var player1 = get_node("/root/World/Player1")
-onready var player2 = get_node("/root/World/Player2")
+onready var player1 = get_node("/root/World/Corgi")
+onready var player2 = get_node("/root/World/Shiba")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
