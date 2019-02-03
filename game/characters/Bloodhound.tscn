@@ -39,7 +39,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 27.0819, 18.2486 )
 
-[node name="Bloodhound" type="KinematicBody2D" index="0"]
+[node name="Bloodhound" type="KinematicBody2D"]
 
 position = Vector2( 219.303, 317.556 )
 scale = Vector2( 1.10842, 1.11242 )
@@ -72,7 +72,7 @@ position = Vector2( 0.721665, 3.23091 )
 scale = Vector2( 1.15059, 1.16191 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 5
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
