@@ -10,7 +10,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 6
 const SPEED = 200
 const JUMP_HEIGHT = 200
-onready var ray = get_node("Ray1")
+onready var ray = get_node("Ray")
 onready var ray2 = get_node("Ray2")
 func _ready():
 	pass
