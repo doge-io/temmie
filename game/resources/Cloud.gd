@@ -11,6 +11,6 @@ func _ready():
         Color(1, 1, 1, 1), Color(1, 1, 1, 0), 10,
         Tween.TRANS_LINEAR, Tween.EASE_IN)
 	effect.start()
-
-func _on_Effect_tween_completed(object, key):
-	queue_free()
+#
+#func _on_Effect_tween_completed(object, key):
+	#queue_free()

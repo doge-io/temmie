@@ -53,7 +53,7 @@ position = Vector2( 0.721665, 3.23091 )
 scale = Vector2( 1.15059, 1.16191 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
@@ -67,7 +67,7 @@ one_way_collision = true
 anchor_mode = 1
 rotating = false
 current = false
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 1.5, 1.5 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
