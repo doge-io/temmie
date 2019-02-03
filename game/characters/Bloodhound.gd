@@ -10,7 +10,7 @@ onready var active = false
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 150 #slightly slower
-const JUMP_HEIGHT = 400
+const JUMP_HEIGHT = 450
 func _physics_process(delta):
 	motion.y += GRAVITY
 	
