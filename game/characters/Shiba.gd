@@ -17,7 +17,10 @@ var cloudObj = null
 var cloud = null
 onready var active = false
 onready var cloud_created = false
-
+onready var ray = get_node("Ray")
+onready var ray2 = get_node("Ray2")
+onready var jump = get_node("/root/Level3/Jump")
+onready var fart = get_node("/root/Level3/Fart")
 var timer = null
 func _ready():
 	cloudObj = load("res://resources/Cloud.tscn")
@@ -32,10 +35,10 @@ func _ready():
 func _physics_process(delta):
 	motion.y += GRAVITY
 	
-	if motion.x != 0:
-		$AnimatedSprite.play("Walk")
+	if ray.is_colliding() or ray2.is_colliding():
+		$AnimatedSprite.play("Idle" if motion.x == 0 else "Walk")
 	else:
-		$AnimatedSprite.play("Idle")
+		$AnimatedSprite.play("Fall")
 		
 	if active:
 		if Input.is_action_pressed("ui_right"):
@@ -50,9 +53,11 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			if is_on_floor():
 				motion.y = -JUMP_HEIGHT
+				jump.play()
 				double_jumped = false
 			elif not double_jumped:
 				motion.y = -JUMP_HEIGHT
+				fart.play()
 				double_jumped = true
 				
 				if cloud_created:
