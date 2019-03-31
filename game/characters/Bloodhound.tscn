@@ -1,32 +1,31 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://characters/Bloodhound.gd" type="Script" id=1]
-[ext_resource path="res://animations/bloodhound_idle0000.png" type="Texture" id=2]
-[ext_resource path="res://animations/bloodhound_idle0001.png" type="Texture" id=3]
-[ext_resource path="res://animations/bloodhound_idle0002.png" type="Texture" id=4]
-[ext_resource path="res://animations/bloodhound_idle0003.png" type="Texture" id=5]
-[ext_resource path="res://animations/bloodhound_idle0004.png" type="Texture" id=6]
-[ext_resource path="res://animations/bloodhound_idle0005.png" type="Texture" id=7]
-[ext_resource path="res://animations/bloodhound_walk0000.png" type="Texture" id=8]
-[ext_resource path="res://animations/bloodhound_walk0001.png" type="Texture" id=9]
-[ext_resource path="res://animations/bloodhound_walk0002.png" type="Texture" id=10]
-[ext_resource path="res://animations/bloodhound_walk0003.png" type="Texture" id=11]
-[ext_resource path="res://animations/bloodhound_walk0004.png" type="Texture" id=12]
-[ext_resource path="res://animations/bloodhound_walk0005.png" type="Texture" id=13]
+[ext_resource path="res://animations/bloodhound_walk0000.png" type="Texture" id=2]
+[ext_resource path="res://animations/bloodhound_walk0001.png" type="Texture" id=3]
+[ext_resource path="res://animations/bloodhound_walk0002.png" type="Texture" id=4]
+[ext_resource path="res://animations/bloodhound_walk0003.png" type="Texture" id=5]
+[ext_resource path="res://animations/bloodhound_walk0004.png" type="Texture" id=6]
+[ext_resource path="res://animations/bloodhound_walk0005.png" type="Texture" id=7]
+[ext_resource path="res://animations/bloodhound_idle0000.png" type="Texture" id=8]
+[ext_resource path="res://animations/bloodhound_idle0001.png" type="Texture" id=9]
+[ext_resource path="res://animations/bloodhound_idle0002.png" type="Texture" id=10]
+[ext_resource path="res://animations/bloodhound_idle0003.png" type="Texture" id=11]
+[ext_resource path="res://animations/bloodhound_idle0004.png" type="Texture" id=12]
+[ext_resource path="res://animations/bloodhound_idle0005.png" type="Texture" id=13]
 [ext_resource path="res://animations/bloodhound-jump.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
-
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 2.0
+"name": "Walk",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "Walk",
-"speed": 5.0
+"name": "Idle",
+"speed": 2.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -35,79 +34,43 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
 extents = Vector2( 27.0819, 18.2486 )
 
 [node name="Bloodhound" type="KinematicBody2D"]
-
 position = Vector2( 219.303, 317.556 )
 scale = Vector2( 1.10842, 1.11242 )
-input_pickable = false
-collision_layer = 1
 collision_mask = 2
-collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable" ]
 
-[node name="Ray" type="RayCast2D" parent="." index="0"]
-
+[node name="Ray" type="RayCast2D" parent="."]
 position = Vector2( -23.0759, 12.444 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 25 )
 collision_mask = 3
 
-[node name="Ray2" type="RayCast2D" parent="." index="1"]
-
+[node name="Ray2" type="RayCast2D" parent="."]
 position = Vector2( 23.5863, 13.6629 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 25 )
 collision_mask = 3
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
-
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.721665, 3.23091 )
 scale = Vector2( 1.15059, 1.16191 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
+frame = 5
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2.26494, 12.0957 )
 shape = SubResource( 2 )
 one_way_collision = true
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
-
-anchor_mode = 1
-rotating = false
-current = false
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2( 1.5, 1.5 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
 smoothing_enabled = true
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Smoothing" ]
 __meta__ = {
 "_edit_lock_": true
 }
-
 
